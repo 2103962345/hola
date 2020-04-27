@@ -22,6 +22,7 @@ $gembuild = "gem build"
 ###########################################################################
 
 function ExecSafe([scriptblock] $cmd) {
+Write-Output $ cmd
     & $cmd
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
@@ -29,6 +30,5 @@ function ExecSafe([scriptblock] $cmd) {
 Write-Output "here"
 
 ExecSafe { & gem build $BuildProjectFile }
-
 
 Write-Output "here2"
