@@ -29,3 +29,6 @@ function ExecSafe([scriptblock] $cmd) {
 Write-Output "here"
 
 ExecSafe { & gem build $BuildProjectFile }
+
+
+Write-Output "here2"
