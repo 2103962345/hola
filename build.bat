@@ -19,7 +19,11 @@ set MSYS64_64_PATH=C:\msys64
 set RUBY27_64_PATH=C:\Ruby27-x64
 
 :: Down to the main directory
+SET var=%cd%
+ECHO %var%
 cd ..
+SET var=%cd%
+ECHO %var%
 mkdir release
 
 :: 64-bit version
