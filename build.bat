@@ -47,7 +47,8 @@ echo.
 echo Ruby
 ::call ruby -e "puts RUBY_VERSION"
 echo.
-call rake build
+::call rake build
+call gem build hola.gemspec
 
 echo.
 
