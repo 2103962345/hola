@@ -13,9 +13,7 @@ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 # CONFIGURATION
 ###########################################################################
 
-$BuildProjectFile = "$PSScriptRoot\hola.gemspec"
-$TempDirectory = "$PSScriptRoot\\.tmp"
-$gembuild = "gem build"
+$BuildProjectFile = "$PSScriptRoot\1.rb"
 
 ###########################################################################
 # EXECUTION
@@ -26,8 +24,4 @@ function ExecSafe([scriptblock] $cmd) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 
-Write-Output "here $BuildProjectFile"
-
-ExecSafe { & gem build $BuildProjectFile }
-
-Write-Output "here2"
+ExecSafe { & ruby $BuildProjectFile }
