@@ -24,7 +24,7 @@ set RUBY27_64_PATH=C:\Ruby27-x64
 ::cd ..
 ::SET var=%cd%
 ::ECHO %var%
-::mkdir release
+mkdir release
 
 :: 64-bit version
 
@@ -45,14 +45,14 @@ echo.
 
 echo.
 echo Ruby
-call ruby -e "puts RUBY_VERSION"
+::call ruby -e "puts RUBY_VERSION"
 echo.
 call rake build
 
 echo.
 
-::move *.gem release
-::move release\*.gemspec .
+move *.gem release
+move release\*.gemspec .
 
 :exit
 
