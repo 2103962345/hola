@@ -34,9 +34,9 @@ set PATH=!MSYS64_64_PATH!\mingw64\bin;!PATH!
 set PATH=!RUBY27_64_PATH!\bin;!PATH!
 echo.
 echo Cleanup
-call ruby -e "puts RUBY_VERSION"
-echo.
-call rake distclean
+::call ruby -e "puts RUBY_VERSION"
+::echo.
+::call rake distclean
 
 :: Build 64-bit
 echo.
@@ -51,8 +51,8 @@ call rake build
 
 echo.
 
-move *.gem release
-move release\*.gemspec .
+::move *.gem release
+::move release\*.gemspec .
 
 :exit
 
