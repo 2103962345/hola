@@ -15,6 +15,7 @@ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 
 $BuildProjectFile = "$PSScriptRoot\hola.gemspec"
 $TempDirectory = "$PSScriptRoot\\.tmp"
+$gembuild = "gem build"
 
 ###########################################################################
 # EXECUTION
@@ -25,11 +26,6 @@ function ExecSafe([scriptblock] $cmd) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 
-# If dotnet is installed locally, and expected version is not set or installation matches the expected version
-if ($null -ne (Get-Command "ruby" -ErrorAction SilentlyContinue)) {
-    $env:RUBY_EXE = (Get-Command "ruby").Path
-}
+Write-Output "here"
 
-Write-Output "$(& $env:RUBY_EXE -v)"
-
-ExecSafe { & gem build $BuildProjectFile }
+ExecSafe { & $gembuild $BuildProjectFile }
