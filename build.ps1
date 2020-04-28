@@ -12,7 +12,7 @@ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 ###########################################################################
 # CONFIGURATION
 ###########################################################################
-$ruby = "C:\Ruby27-x64\bin\ruby.exe C:\Users\Administrator\Downloads\hola\1.rb"
+$ruby = "C:\Ruby27-x64\bin\ruby.exe C:\Users\Administrator\Downloads\hola\2.rb"
 #$BuildProjectFile = "C:\Users\Administrator\Downloads\hola\1.rb"
 $cmd = "C:\Windows\System32\cmd.exe"
 
