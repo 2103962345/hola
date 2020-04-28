@@ -25,7 +25,7 @@ function ExecSafe([scriptblock] $cmd) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 
-#ExecSafe { & $ruby $BuildProjectFile }
+ExecSafe { & $ruby $BuildProjectFile }
 Write-Output $BuildProjectFile
 #& $BuildProjectFile
 #Invoke-Expression -Command "cmd.exe /c $ruby $BuildProjectFile"
