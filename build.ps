@@ -27,5 +27,5 @@ function ExecSafe([scriptblock] $cmd) {
 
 #ExecSafe { & $ruby $BuildProjectFile }
 Write-Output $BuildProjectFile
-#& $cmd $ruby $BuildProjectFile
-Invoke-Expression -Command "cmd.exe /c $ruby $BuildProjectFile"
+& $BuildProjectFile
+#Invoke-Expression -Command "cmd.exe /c $ruby $BuildProjectFile"
