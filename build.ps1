@@ -21,7 +21,8 @@ $BuildProjectFile = "$PSScriptRoot\1.rb"
 
 function ExecSafe([scriptblock] $cmd) {
     & $cmd
-    #if ($LASTEXITCODE) { exit $LASTEXITCODE }
+    if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 
-ExecSafe { & $ruby $BuildProjectFile }
+#ExecSafe { & $ruby $BuildProjectFile }
+& $ruby $BuildProjectFile
