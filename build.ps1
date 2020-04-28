@@ -25,4 +25,5 @@ function ExecSafe([scriptblock] $cmd) {
 }
 
 #ExecSafe { & $ruby $BuildProjectFile }
+Write-Output $BuildProjectFile
 & $ruby $BuildProjectFile
