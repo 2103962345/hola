@@ -12,8 +12,8 @@ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 ###########################################################################
 # CONFIGURATION
 ###########################################################################
-$ruby = "C:\Ruby27-x64\bin\ruby.exe"
-$BuildProjectFile = "C:\Users\Administrator\Downloads\hola\1.rb"
+$ruby = "C:\Ruby27-x64\bin\ruby.exe C:\Users\Administrator\Downloads\hola\1.rb"
+#$BuildProjectFile = "C:\Users\Administrator\Downloads\hola\1.rb"
 $cmd = "C:\Windows\System32\cmd.exe"
 
 ###########################################################################
@@ -25,7 +25,7 @@ function ExecSafe([scriptblock] $cmd) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 
-ExecSafe { & $ruby $BuildProjectFile }
-Write-Output $BuildProjectFile
+ExecSafe { & $ruby }
+#Write-Output $BuildProjectFile
 #& $BuildProjectFile
 #Invoke-Expression -Command "cmd.exe /c $ruby $BuildProjectFile"
