@@ -1,1 +1,1 @@
-10.times { |i| puts "hello #{i}" }
+puts "hello"
